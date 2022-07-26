@@ -1,66 +1,109 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <title>λAVA</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>λAVA</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .container,
+        .container-fluid {
+            margin-right: 0px;
+            margin-left: 0px;
+        }
 
-  <!-- Favicons -->
-  <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
-  <meta name="theme-color" content="#712cf9">
-  <style>
-    html,
-    body {
-      height: 100%;
-      margin: 0;
-      background-image: url(background.png);
-      background-size: cover;
-      background-position: top;
-      background-repeat: no-repeat;
-    }
-
-    .flex-fill {
-      flex: 1;
-    }
-    .contact-button {
-        width: 250px;
-      }
-      .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-    background-color: #FD5F24 !important;
-    border-color: #FD5F24;
-}
-    @media (max-width: 1000px) {
-
-    }
-  </style>
-
-
+        .logo {
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 
-<body class="flex">
-  <div class="container-fluid d-flex h-100 flex-column">
-    <div class="row">
-      <div class=".col-6 .col-md-4 ">
-        <img width="180" height="90" style="margin: 20px;" src="logo.svg">
-      </div>
-    </div>
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77"
+    style="background: #2d2d2d;font-family: Roboto, sans-serif;">
+    <nav class="navbar navbar-light navbar-expand-md" id="mainNav" style="background: rgb(255,255,255);">
+        <div class="container"><img class="img-fluid logo" src="assets/img/logo.svg" style="width: 180px;"></div>
+    </nav>
+    <header class="masthead" style="background: url(&quot;assets/img/background.png&quot;) center;margin-top: -60px;">
+        <div class="intro-body"></div>
+    </header>
+    <section>
+        <div style="margin: 20px;margin-top: 40px;">
+            <div class="container-fluid"
+                style="background: #2d2d2d;margin-top: 20px;padding-right: 20px;padding-left: 20px;">
+                <h1 style="margin-top: 10px;font-family: Roboto, sans-serif;">Contact Information</h1>
+                <hr>
+                <form id="contactForm" action="https://formspree.io/f/mnqwerzl" method="POST"
+                    style="font-family: Roboto, sans-serif;">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div id="successfail-1"></div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-right: 0px;margin-left: 0px;margin-top: 10px;">
+                        <div class="col-12 col-md-6">
+                            <h2 class="h4" style="font-family: Roboto, sans-serif;"><i class="fa fa-location-arrow"></i>
+                                Locate Us</h2>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="static-map"><iframe allowfullscreen="" frameborder="0" loading="lazy"
+                                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyADPSNtDCnll68bTZHkZGc3YFd0guSGiRc&amp;q=1+Broadway%2C+Cambridge+MA&amp;zoom=12"
+                                            width="100%" height="400"></iframe></div>
+                                </div>
+                                <div class="col-sm-6 col-md-12 col-lg-6">
+                                    <div><span>1 Broadway</span></div>
+                                    <div><span>Cambridge, MA 02142</span></div>
+                                    <div><abbr data-toggle="tooltip" data-placement="top"
+                                            title="Office Phone: 555-555-555">O:</abbr> 555-555-5555</div>
+                                    <hr class="d-sm-none">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <h2 class="h4" style="font-family: Roboto, sans-serif;"><i class="fa fa-envelope"></i>
+                                Contact Us<small></small></h2>
+                            <div class="form-group mb-3"><label class="form-label" for="from-name">Name</label><span
+                                    class="required-input">*</span>
+                                <div class="input-group"><span class="input-group-text"><i
+                                            class="fa fa-user-o"></i></span><input class="form-control" type="text"
+                                        name="name" required="" placeholder="Full Name"></div>
+                            </div>
+                            <div class="form-group mb-3"><label class="form-label" for="from-email">Email</label><span
+                                    class="required-input">*</span>
+                                <div class="input-group"><span class="input-group-text"><i
+                                            class="fa fa-envelope-o"></i></span><input class="form-control" type="email"
+                                        name="email" required="" placeholder="Email Address"></div>
+                            </div>
+                            <div class="form-group mb-3"><label class="form-label"
+                                    for="from-comments">Message</label><textarea class="form-control"
+                                    id="from-comments-1" name="comments" placeholder="Write Message"
+                                    rows="5"></textarea></div>
+                            <div class="form-group mb-3">
+                                <div class="row">
+                                    <div class="col"><button class="btn d-block w-100" type="reset"
+                                            style="background: #ff5e0b;color: rgb(255,255,255);font-family: Roboto, sans-serif;"><i
+                                                class="fa fa-undo"></i> Reset</button></div>
+                                    <div class="col"><button class="btn d-block w-100" type="submit"
+                                            style="background: #ff5e0b;color: rgb(254,254,254);font-family: Roboto, sans-serif;">Submit
+                                            <i class="fa fa-chevron-circle-right"></i></button></div>
+                                </div>
+                            </div>
+                            <hr class="d-flex d-md-none">
+                        </div>
+                    </div>
+                </form>
+            </div>
 
-
-  </div>
-
+        </div>
+    </section>
+    <div class="map-clean" style="--bs-primary: #ff5e0b;--bs-primary-rgb: 255,94,11;background: #2d2d2d;"></div>
+    <footer class="d-xl-flex justify-content-xl-center" style="background: #2d2d2d;">
+        <div class="container text-center"></div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
 
 </html>
-<!--   <footer class="py-2 my-1">
-      <div class="col-md-6 text-white" style="margin-left:20px">
-        <p style="margin:0px">1 Broadway, 14th Floor</p>
-        <p>Cambridge, MA, 02142</p>
-      </div>
-    </footer>-->
