@@ -7,6 +7,7 @@
     <title>λAVA</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Grotesk&amp;display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         .container,
@@ -19,11 +20,31 @@
             margin-left: 20px;
             margin-top: 20px;
         }
+        .inputfield{
+          height:60px;
+        }
+        .form-button{
+          height:65px;
+        }
+        .form-label{
+          margin-left: 10px;
+        }
+        .body{
+          --font:"Space Grotesk", "Roboto"
+        }
+        .message{
+          height: 215px;
+        }
+        .address-text{
+          font-size: 15px;
+          margin-bottom: 5px;
+          margin-left: 10px;
+        }
     </style>
 </head>
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77"
-    style="background: #2d2d2d;font-family: Roboto, sans-serif;">
+    style="background: #2d2d2d;">
     <nav class="navbar navbar-light navbar-expand-md" id="mainNav" style="background: rgb(255,255,255);">
         <div class="container"><img class="img-fluid logo" src="assets/img/logo.svg" style="width: 180px;"></div>
     </nav>
@@ -34,10 +55,10 @@
         <div style="margin-top: 40px;">
             <div class="container-fluid"
                 style="background: #2d2d2d;margin-top: 20px;padding-right: 20px;padding-left: 20px;">
-                <h1 style="margin-top: 10px;font-family: Roboto, sans-serif;">Contact Information</h1>
+                <h1 style="margin-top: 10px;font-family: Space Grotesk, Space Grotesk, Roboto, sans-serif">Contact Information</h1>
                 <hr>
                 <form id="contactForm" action="https://formspree.io/f/mnqwerzl" method="POST"
-                    style="font-family: Roboto, sans-serif;">
+                    style="font-family: Space Grotesk, Space Grotesk, Roboto, sans-serif;">
                     <div class="row">
                         <div class="col-md-6">
                             <div id="successfail-1"></div>
@@ -45,50 +66,42 @@
                     </div>
                     <div class="row" style="margin-right: 0px;margin-left: 0px;margin-top: 10px;">
                         <div class="col-12 col-md-6">
-                            <h2 class="h4" style="font-family: Roboto, sans-serif;"><i class="fa fa-location-arrow"></i>
-                                Locate Us</h2>
+                            <h2 class="h4" style="font-family: Space Grotesk, Space Grotesk, Roboto, sans-serif;"><i class="fa fa-location-arrow"></i>
+                                Visit Us</h2>
                             <div class="row">
+
                                 <div class="col-12">
-                                    <div class="static-map"><iframe allowfullscreen="" frameborder="0" loading="lazy"
+                                    <div class="static-map" style=" margin-top: 15px; padding-left:10px; padding-right:10px"><iframe allowfullscreen="" frameborder="0" loading="lazy"
                                             src="https://www.google.com/maps/embed/v1/place?key=AIzaSyADPSNtDCnll68bTZHkZGc3YFd0guSGiRc&amp;q=1+Broadway%2C+Cambridge+MA&amp;zoom=12"
-                                            width="100%" height="400"></iframe></div>
+                                            width="100%" height="434"></iframe></div>
                                 </div>
-                                <div class="col-sm-6 col-md-12 col-lg-6">
-                                    <div><span>1 Broadway</span></div>
-                                    <div><span>Cambridge, MA 02142</span></div>
-                                    <div><abbr data-toggle="tooltip" data-placement="top"
-                                            title="Office Phone: 555-555-555">O:</abbr> 555-555-5555</div>
-                                    <hr class="d-sm-none">
-                                </div>
+                                <div class="col-sm-6 col-md-12 col-lg-6" style=" margin-top: 15px; margin-bottom: 20px;">
+                                  <div class="address-text">1 Broadway, 14th Floor</div>
+                                  <div class="address-text">Cambridge, MA 02142</div>
+                              </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6">
-                            <h2 class="h4" style="font-family: Roboto, sans-serif;"><i class="fa fa-envelope"></i>
-                                Contact Us<small></small></h2>
-                            <div class="form-group mb-3"><label class="form-label" for="from-name">Name</label><span
-                                    class="required-input">*</span>
-                                <div class="input-group"><span class="input-group-text"><i
-                                            class="fa fa-user-o"></i></span><input class="form-control" type="text"
-                                        name="name" required="" placeholder="Full Name"></div>
+                        <div class="col-12 col-md-6 px-4">
+                            <h2 class="h4" style="font-family: Space Grotesk, Space Grotesk, Roboto, sans-serif; margin-bottom: 35px;"><i class="fa fa-envelope"></i> Message Us<small></small></h2>
+
+                            <div class="form-group mb-3" style="margin-top: -15px;"><label class="form-label" for="from-name">Name</label>
+                                <div class="input-group"><span class="input-group-text"><i class="fa fa-user-o"></i></span>
+                                  <input class="form-control inputfield" type="text" name="name" required="" placeholder="Full Name"></div>
                             </div>
-                            <div class="form-group mb-3"><label class="form-label" for="from-email">Email</label><span
-                                    class="required-input">*</span>
-                                <div class="input-group"><span class="input-group-text"><i
-                                            class="fa fa-envelope-o"></i></span><input class="form-control" type="email"
-                                        name="email" required="" placeholder="Email Address"></div>
+                            <div class="form-group mb-3"><label class="form-label" for="from-email">Email</label>
+                                <div class="input-group"><span class="input-group-text"><i class="fa fa-envelope-o"></i></span>
+                                  <input class="form-control inputfield" type="email" name="email" required="" placeholder="Email Address">
+                                </div>
                             </div>
-                            <div class="form-group mb-3"><label class="form-label"
-                                    for="from-comments">Message</label><textarea class="form-control"
-                                    id="from-comments-1" name="comments" placeholder="Write Message"
-                                    rows="5"></textarea></div>
+                            <div class="form-group mb-4"><label class="form-label" for="from-comments">Message</label>
+                              <textarea class="form-control message" id="from-comments-1" name="comments" placeholder="Write Message" rows="8"></textarea>
+                            </div>
                             <div class="form-group mb-3">
                                 <div class="row">
-                                    <div class="col"><button class="btn d-block w-100" type="reset"
-                                            style="background: #ff5e0b;color: rgb(255,255,255);font-family: Roboto, sans-serif;"><i
-                                                class="fa fa-undo"></i> Reset</button></div>
-                                    <div class="col"><button class="btn d-block w-100" type="submit"
-                                            style="background: #ff5e0b;color: rgb(254,254,254);font-family: Roboto, sans-serif;">Submit
-                                            <i class="fa fa-chevron-circle-right"></i></button></div>
+                                    <div class="col"><button class="btn d-block w-100 form-button" type="reset" style="background: #ff5e0b;color: rgb(255,255,255);font-family: Space Grotesk, Roboto, sans-serif;">
+                                         Reset</button></div>
+                                    <div class="col"><button class="btn d-block w-100 form-button" type="submit" style="background: #ff5e0b;color: rgb(254,254,254);font-family: Space Grotesk, Roboto, sans-serif;">
+                                         Submit </button></div>
                                 </div>
                             </div>
                             <hr class="d-flex d-md-none">
