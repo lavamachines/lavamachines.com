@@ -25,12 +25,20 @@
         }
         .form-button{
           height:65px;
+          background: #ff5e0b;
+          color: rgb(255,255,255);
+          font-family: Space Grotesk, Roboto, sans-serif;
+          border-radius: 4px;
         }
         .form-label{
           margin-left: 10px;
         }
         .body{
-          --font:"Space Grotesk", "Roboto"
+          --font:"Space Grotesk", "Roboto";
+          background: #2d2d2d;
+          margin-top: 20px;
+          padding-right: 20px;
+          padding-left: 20px;
         }
         .message{
           height: 220px;
@@ -43,6 +51,46 @@
         .iconglyph{
           padding:8px;
         }
+        .location-header{
+          font-family: Space Grotesk, Space Grotesk, Roboto, sans-serif;
+        }
+        .static-map{
+            width:100%;
+            height: 434px;
+          }
+          .header-title{
+            font-family: Space Grotesk, Roboto;
+            font-size: 60px;
+            color: var(--bs-gray-900);
+          }
+          .header-subtitle{
+            font-family: Space Grotesk, Roboto;
+            font-size: 30px;
+            margin-bottom: 0px;
+          }
+          .header-button{
+            background: #ff5e0b;
+            font-family: Space Grotesk, Roboto;
+            font-size: 20px;
+            color: rgb(254,254,254);
+            width: 259px;
+            height:75px;
+            margin-bottom: 80px;
+            border-radius: 4px;
+          }
+        @media only screen and (min-width : 1224px) {
+          .location-header{
+            margin-left: 15px;
+          }
+          .static-map{
+            margin-top: 17px;
+            padding-left:10px;
+            padding-right:10px;
+            width:100%;
+            height: 434px;
+          }
+        }
+
     </style>
 </head>
 
@@ -51,14 +99,21 @@
     <nav class="navbar navbar-light navbar-expand-md" id="mainNav" style="background: rgb(255,255,255);">
         <div class="container"><img class="img-fluid logo" src="assets/img/logo.svg" style="width: 180px;"></div>
     </nav>
-    <header class="masthead" style="background: url(&quot;assets/img/background.png&quot;) center /cover;margin-top: -60px;">
-        <div class="intro-body"></div>
-    </header>
-    <section>
+    <header class="masthead" style="background: url('assets/img/background.png') center/cover;margin-top: -60px;">
+      <div class="intro-body">
+          <div class="col-lg-8 mx-auto" style="margin-bottom: 194px;">
+              <h1 class="header-title">Interactive Control Systems</h1>
+              <p class="header-subtitle" style="color: var(--bs-gray-900);"><span style="color: rgb(15, 15, 16);">Reliability through Visibility</span><br /><br /></p>
+              <div class="row">
+                  <div class="col  d-flex justify-content-center w-100"><button class="btn d-block header-button" type="button" onClick="document.getElementById('contact-us').scrollIntoView();" >Contact Us</button></div>
+              </div>
+          </div>
+      </div>
+  </header>
+    <section id="contact-us">
         <div style="margin-top: 40px;">
-            <div class="container-fluid"
-                style="background: #2d2d2d;margin-top: 20px;padding-right: 20px;padding-left: 20px;">
-                <h1 style="margin-top: 10px;font-family: Space Grotesk, Space Grotesk, Roboto, sans-serif">Contact Information</h1>
+            <div class="container-fluid">
+                <h1 style="margin-top: 10px; margin-left:20px; font-family: Space Grotesk, Space Grotesk, Roboto, sans-serif">Contact Information</h1>
                 <hr>
                 <form id="contactForm" action="https://formspree.io/f/mnqwerzl" method="POST"
                     style="font-family: Space Grotesk, Space Grotesk, Roboto, sans-serif;">
@@ -69,18 +124,18 @@
                     </div>
                     <div class="row" style="margin-right: 0px;margin-left: 0px;margin-top: 10px;">
                         <div class="col-12 col-md-6">
-                            <h2 class="h4" style="font-family: Space Grotesk, Space Grotesk, Roboto, sans-serif; margin-left: 15px;"><i class="fa fa-location-arrow"></i>
+                            <h2 class="h4 location-header"><i class="fa fa-location-arrow"></i>
                                 Meet With Us</h2>
                             <div class="row">
-
                                 <div class="col-12">
-                                    <div class="static-map" style=" margin-top: 17px; padding-left:10px; padding-right:10px"><iframe allowfullscreen="" frameborder="0" loading="lazy"
+                                    <div class="static-map"><iframe allowfullscreen="" frameborder="0" loading="lazy"
                                             src="https://www.google.com/maps/embed/v1/place?key=AIzaSyADPSNtDCnll68bTZHkZGc3YFd0guSGiRc&amp;q=1+Broadway%2C+Cambridge+MA&amp;zoom=12"
-                                            width="100%" height="434"></iframe></div>
+                                            width="100%" height="100%"></iframe></div>
                                 </div>
                                 <div class="col-sm-6 col-md-12 col-lg-6" style=" margin-top: 15px; margin-bottom: 30px;">
                                   <div class="address-text">1 Broadway, 14th Floor</div>
                                   <div class="address-text">Cambridge, MA 02142</div>
+                                  <div class="address-text">hello@lavamachines.com</div>
                               </div>
                             </div>
                         </div>
@@ -101,9 +156,9 @@
                             </div>
                             <div class="form-group mb-3">
                                 <div class="row">
-                                    <div class="col"><button class="btn d-block w-100 form-button" type="reset" style="background: #ff5e0b;color: rgb(255,255,255);font-family: Space Grotesk, Roboto, sans-serif;">
+                                    <div class="col"><button class="btn d-block w-100 form-button" type="reset">
                                          Reset</button></div>
-                                    <div class="col"><button class="btn d-block w-100 form-button" type="submit" style="background: #ff5e0b;color: rgb(254,254,254);font-family: Space Grotesk, Roboto, sans-serif;">
+                                    <div class="col"><button class="btn d-block w-100 form-button" type="submit">
                                          Submit </button></div>
                                 </div>
                             </div>
